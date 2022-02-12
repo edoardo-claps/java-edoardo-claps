@@ -2,8 +2,6 @@ package es0;
 
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner6;
-
 public class EsNumeri {
     public static void main(String[] args) {
 
@@ -52,15 +50,38 @@ public class EsNumeri {
         }
 
             //controllo se i numeri sono crescenti o no
-            if(array[0]<array[1]){
-                System.out.println("i numeri sono ordinati in modo crescente");
+            int crescenti=0;
+            int decrescente=0;
+            
+
+            for (int i=1;i<array.length;i++){
+
+                if (array[i]>array[i-1]){
+                    crescenti += 1;
+                }
+                else if(array[i]<array[i-1]){
+                    decrescente += 1;
+                } 
+               
             }
-            else if(array[0]>array[1]){
-                System.out.println("i numeri sono ordinati in modo crescente");
+
+
+            //per debug
+            System.out.println(crescenti+"+"+decrescente);
+
+
+            // do il risultato
+            if(crescenti!=0 && decrescente!=0 ){
+                    System.out.println("i numeri non sono ordinati");
             }
-            else{
-                System.out.println("i numeri non sono ordinati");
+            else{ 
+                if(crescenti < decrescente){
+                    System.out.println("i numeri sono ordinati in modo decrescente");
+                }
+                else if(crescenti > decrescente){
+                    System.out.println("i numeri sono ordinati in modo crescente");
+                }
             }
         }
        
-    }
+}
