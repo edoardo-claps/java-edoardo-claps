@@ -13,9 +13,23 @@ public class EsOrdinamento {
         return b;
     }
 
-    public static void main(String[] args) {
-        int[] a = { 1, 6, 9, -12 };
-        System.out.println(posMax(a));
-        // deve stampare 2
+        
+     // metodo swap che dato un array e due posizioni, scambi i valori all'interno
+     public static void swap(int[] array, int pos1, int pos2){
+         int a=array[pos1];
+         array[pos1]=array[pos2];
+         array[pos2]=a;
+         
+         
+        Util.stampa(array);
+
     }
-}
+
+     public static void main(String[] args) {
+        int[] a = { 1, 6, 9, 12 };
+
+        swap(a, 2, 1);
+
+
+    }
+} 
