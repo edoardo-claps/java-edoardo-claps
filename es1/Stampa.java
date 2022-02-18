@@ -20,13 +20,13 @@ public static void stampa(int [] pippo){
     System.out.print("]");
 
 }
-public static void main(String[] args){
+/* public static void main(String[] args){
     int[] array1={1,2,4,6,7};
     
     stampa(array1);
 }
 
-
+ */
 
 
 
