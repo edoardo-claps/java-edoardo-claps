@@ -1,31 +1,18 @@
 package com.engim.lezione1;
 
-public class BottigliaConTappo {
+public class BottigliaConTappo extends Bottiglia{
 
-        private int capacita;
-        private int quantita;
+
         private boolean aperta;
 
 
 
-        public BottigliaConTappo(int capacita) {
-            if (capacita< 0){
-                capacita=0;
-            }
-            this.capacita = capacita;
-            this.quantita = 0;
-            this.aperta=false;
-
+        public BottigliaConTappo(int capacità) {
+            super(capacità);
+            aperta=true;
         }
 
-        public int getCapacita() {
-            return capacita;
-        }
-
-        public int getQuantita() {
-            return quantita;
-        }
-
+   /*
 
 
         public void apri(){
@@ -38,11 +25,7 @@ public class BottigliaConTappo {
 
         public void riempi(int q){
             if(this.aperta) {
-                if (this.quantita + q <= this.capacita) {
-                    this.quantita += q;
-                } else {
-                    this.quantita = this.capacita;
-                }
+                super(q);
             }
             else{
                 System.out.println("la bottiglia è chiusa");
@@ -65,7 +48,7 @@ public class BottigliaConTappo {
         }
 
 
-
+*/
 
         @Override
         public String toString() {
