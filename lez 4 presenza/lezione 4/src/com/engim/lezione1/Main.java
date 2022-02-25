@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// creo la bottiglia e la vedo
-        Bottiglia b1= new Bottiglia(1000);
-        BottigliaConTappo b2= new BottigliaConTappo(1000);
+        Bottiglia b2= new Bottiglia(1000);
+        BottigliaConTappo b1= new BottigliaConTappo(1000);
         System.out.println(b1);
         //provo a riempire la bottiglia che parte chiusa
         b1.riempi(500);

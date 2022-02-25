@@ -12,8 +12,6 @@ public class BottigliaConTappo extends Bottiglia{
             aperta=true;
         }
 
-   /*
-
 
         public void apri(){
             this.aperta=true;
@@ -22,41 +20,17 @@ public class BottigliaConTappo extends Bottiglia{
         public void chiudi(){
             this.aperta=false;
         }
+//con override ridefiniamo il comportamento di un metodo in una sottoclasse
 
-        public void riempi(int q){
-            if(this.aperta) {
-                super(q);
-            }
-            else{
-                System.out.println("la bottiglia è chiusa");
-            }
-        }
+    @Override
+    public void riempi(int q) {
+            if(aperta)
+        super.riempi(q);
+    }
 
-
-        public void svuota(int q){
-            if(this.aperta) {
-                if(q> this.quantita){
-                this.quantita=0;
-                }
-                else {
-                    this.quantita-=q;
-                }
-            }
-            else{
-                System.out.println("la bottiglia è chiusa");
-            }
-        }
-
-
-*/
-
-        @Override
-        public String toString() {
-            return "Bottiglia{" +
-                    "capacita=" + capacita +
-                    ", quantita=" + quantita +
-                    '}';
-        }
-
-
+    @Override
+    public void svuota(int q) {
+            if(aperta)
+        super.svuota(q);
+    }
 }
