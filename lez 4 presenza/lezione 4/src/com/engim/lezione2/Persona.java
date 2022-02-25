@@ -1,3 +1,5 @@
+package com.engim.lezione2;
+
 public class Persona{
     public String nome;
     public String cognome;
