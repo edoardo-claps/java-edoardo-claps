@@ -1,9 +1,12 @@
 package com.engim.lezione_abstract.riscaldamento;
 
 public abstract class List {
-private int i=0;
+
 
     public abstract int get( int index);
     public abstract List add(int index, int value);
-    public abstract int length( int i );
+    public abstract int length ();
+    public abstract List remove(int n);
+    public abstract List removeFromIndex(int i);
+
 }

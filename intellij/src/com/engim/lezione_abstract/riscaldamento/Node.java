@@ -51,21 +51,51 @@ public class Node extends List{
     }
 
     @Override
-    public int length( int i ) {
+    public int length() {
+     return 1+this.next.length();
+    }
 
-        return 0;
+    @Override
+    public List remove(int n) {
+        this.next=next.remove(n);
+
+        if (n==this.value){
+           return this.next;
+        }
+        else {
+            return this;
+        }
+    }
+
+    @Override
+    public List removeFromIndex(int i) {
+        if (i==0){
+            return this.next;
+        }
+        else {
+            this.next=next.removeFromIndex(i - 1);
+
+            return this;
+        }
+
     }
 
     public static void main(String[] args){
 
 
-        List oggetto = new Node(new Node(new Nil(), 3),8);
+        List oggetto = new Node(new Node(new Node(new Nil(), 3),8),1);
+        List oggetto2 = new Nil();
 
-        System.out.println(oggetto.get(2));
+       // System.out.println(oggetto.get(2));
 
-        oggetto.add(2,5);
+        //oggetto.add(2,5);
+        System.out.println(oggetto.length());
 
-       System.out.println(oggetto);
+     oggetto=oggetto.remove(8);
+
+     System.out.println(oggetto);
+
+     System.out.println(oggetto.length());
 
     }
 

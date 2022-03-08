@@ -20,7 +20,18 @@ public class Nil extends List{
     }
 
     @Override
-    public int length(int i) {
-        return 0;
+    public int length() {
+    return 0;
+    }
+
+    @Override
+    public List remove(int n) {
+        return this;
+    }
+
+    @Override
+    public List removeFromIndex(int i) {
+  //      System.out.println("index out of bound");
+        return this;
     }
 }
