@@ -34,11 +34,6 @@ public class Esercizio2 {
         System.out.println("la somma è "+ somma);
 
 
-       /* System.out.println("inserisci il primo numero");
-        primonumero=input.nextInt();
-        System.out.println("inserisci il secondo numero");
-        secondonumero=input.nextInt();*/
-
 
     }
 }
