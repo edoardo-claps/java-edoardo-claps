@@ -1,3 +1,5 @@
+package Esercizio2;
+
 import java.lang.reflect.Array;
 import java.util.Scanner;
 
@@ -32,8 +34,6 @@ public class Esercizio2 {
         }
 
         System.out.println("la somma è "+ somma);
-
-
 
     }
 }
