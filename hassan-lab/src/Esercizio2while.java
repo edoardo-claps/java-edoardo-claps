@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+/**
+ * @author Edoardo Claps
+ * esercizio che richiede di implementare i cicli while-for-dowhile sommando due numeri x volte
+ * tenendo traccia dei numeri
+ * */
 
 public class Esercizio2while {
     public static void main(String[] args) {

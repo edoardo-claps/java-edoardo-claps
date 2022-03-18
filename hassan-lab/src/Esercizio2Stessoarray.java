@@ -1,4 +1,9 @@
-import javax.swing.text.Element;
+
+/**
+ * @author Edoardo Claps
+ * esercizio che richiede di implementare i cicli while-for-dowhile sommando due numeri x volte
+ * tenendo traccia dei numeri
+ * */
 
 public class Esercizio2Stessoarray {
     public static void main(String[] args) {
