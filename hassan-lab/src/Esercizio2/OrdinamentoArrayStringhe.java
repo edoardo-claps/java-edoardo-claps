@@ -1,13 +1,14 @@
 package Esercizio2;
-/**
- * @author Edoardo Claps
- * dato un array scrivere la media
- * */
+
 
 public class OrdinamentoArrayStringhe {
-    public static void main(String[] args) {
-//definisco array non ordinato
-        String [] parole={"ciao","amici","come","state","milano"};
+    /**
+     * @author Edoardo Claps
+     * dato un array di stringhe riordinarlo
+     * @param parole è l'array in ingresso da rioridinare
+     * @return l'array ordinato
+     * */
+    public static String[] ordina(String[] parole){
 
 
         //ciclo per ordinare
@@ -23,6 +24,14 @@ public class OrdinamentoArrayStringhe {
                 }
             }
         }
+        return parole;
+    }
+
+    public static void main(String[] args) {
+//definisco array non ordinato
+        String [] parole={"ciao","amici","come","state","milano"};
+
+        parole=ordina(parole);
 
         for(String ele:parole){
             System.out.println(ele);

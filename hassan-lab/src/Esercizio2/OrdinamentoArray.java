@@ -1,14 +1,14 @@
 package Esercizio2;
-/**
- * @author Edoardo Claps
- * dato un array scrivere la media
- * */
+
 
 public class OrdinamentoArray {
-    public static void main(String[] args) {
-//definisco array non ordinato
-        int[] numeri={2,4,5,6,7,9,0,3,32,1,45,5};
-
+    /**
+     * @author Edoardo Claps
+     * dato un array di interi rioridinarlo
+     * @param numeri è il parametro in ingresso, l'array da ordinare
+     * @return array ordinato
+     * */
+    public static int[] ordina(int[] numeri){
 
         //ciclo per ordinare
         for (int j = 1; j < numeri.length; j++) {
@@ -23,11 +23,18 @@ public class OrdinamentoArray {
                 }
             }
         }
+    return numeri;
+    }
+
+    public static void main(String[] args) {
+        //definisco array non ordinato
+        int[] numeri={2,4,5,6,7,9,0,3,32,1,45,5};
+
+        numeri=ordina(numeri);
 
         for(int ele:numeri){
             System.out.println(ele);
         }
 
     }
-
 }
