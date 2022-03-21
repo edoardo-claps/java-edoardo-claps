@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="556.0" prefWidth="588.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.example.jfxprogect.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="TOP" prefHeight="44.0" prefWidth="438.0" text="Prova Interfaccia Grafica">
+      <font>
+         <Font name="System Bold" size="27.0" />
+      </font>
+      <textFill>
+         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.20107603073120117" green="0.4421052634716034" blue="0.14081871509552002" />
+                  </color>
+               </Stop>
+               <Stop offset="0.007564296520423602">
+                  <color>
+                     <Color red="0.40477192401885986" green="0.5894736647605896" blue="0.3536842167377472" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color green="1.0" blue="0.25" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill></Label>
+   <Label fx:id="personeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="120.0" style="-fx-border-color: black;" text="La lista è vuota" />
+   <TextField fx:id="textField" prefHeight="27.0" prefWidth="444.0" promptText="Nome della Persona" />
+    <Button fx:id="addPersonaButton" onAction="#onaddPersonaButtonClick" text="+ Nuova Persona">
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.20107603073120117" green="0.4421052634716034" blue="0.14081871509552002" />
+                  </color>
+               </Stop>
+               <Stop offset="0.007564296520423602">
+                  <color>
+                     <Color red="0.20107603073120117" green="0.4421052634716034" blue="0.14081871509552002" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.035087719559669495" green="0.9473684430122375" blue="0.2631579041481018" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill></Button>
+</VBox>
