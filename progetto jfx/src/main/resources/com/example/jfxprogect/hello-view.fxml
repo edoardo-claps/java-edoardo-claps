@@ -41,7 +41,7 @@
             </stops>
          </RadialGradient>
       </textFill></Label>
-   <Label fx:id="personeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="120.0" style="-fx-border-color: black;" text="La lista è vuota" />
+   <Label fx:id="personeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="554.0" style="-fx-border-color: black;" text="La lista è vuota" />
    <TextField fx:id="textField" prefHeight="27.0" prefWidth="444.0" promptText="Nome della Persona" />
     <Button fx:id="addPersonaButton" onAction="#onaddPersonaButtonClick" text="+ Nuova Persona">
       <textFill>
