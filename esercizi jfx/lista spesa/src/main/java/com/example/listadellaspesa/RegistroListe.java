@@ -27,10 +27,20 @@ public class RegistroListe {
 
     public  List<String> findListaByNome( String nome){
         for (Lista p:liste){
-            if(p.nome.equals(nome)){
-                return p; // ?????
+            if(p.nome.equalsIgnoreCase(nome)){
+                return p.articoli;
             }
         }
+        return null;
+    }
+    public boolean removeListaByNome(String nome){
+        for (Lista p:liste){
+            if(p.nome.equals(nome)){
+                liste.remove(p);
+                return true;
+            }
+        }
+        return false;
     }
 
     public static RegistroListe getInstance(){

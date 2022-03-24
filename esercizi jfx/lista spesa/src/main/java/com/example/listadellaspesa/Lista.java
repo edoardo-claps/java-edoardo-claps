@@ -19,7 +19,16 @@ public class Lista {
            return false;
        }
     }
+    public Boolean removeElemToLista(String articolo){
+        for (String ele:articoli){
+            if(ele.equalsIgnoreCase(articolo)) {
+                this.articoli.remove(articolo);
+                return true;
+            }
+        }
+        return false;
 
+    }
     public String showList(){
         String s="";
         for(String a:articoli){
