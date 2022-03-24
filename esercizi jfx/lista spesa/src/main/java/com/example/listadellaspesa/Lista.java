@@ -4,10 +4,15 @@ import java.util.List;
 
 public class Lista {
     public String nome;
-    public List<String > articoli;
+    public List<String > articoli ;
 
     public Lista(String nome) {
         this.nome = nome;
+        this.articoli=null;
+    }
+
+    public String getNome(){
+        return this.nome;
     }
 
    public Boolean addElemToLista(String articolo){

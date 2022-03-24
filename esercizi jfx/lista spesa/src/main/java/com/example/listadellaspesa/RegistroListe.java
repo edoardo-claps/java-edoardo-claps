@@ -12,23 +12,37 @@ public class RegistroListe {
     }
 
     public void addLista(String a){
-        Lista p=new Lista(a);
-        liste.add(p);
-
+        if(liste.isEmpty()){
+            Lista p = new Lista(a);
+            liste.add(p);
+        }
+        else if (RegistroListe.getInstance().exist(a)){
+                Lista p = new Lista(a);
+                liste.add(p);
+            }
     }
 
-    public List<String> getListe(){
-        List<String> s = null;
-        for(Lista p:liste){
-            s.add(p.nome);
+    public Boolean exist( String a){
+        for (Lista e: liste) {
+            if (e.nome.equalsIgnoreCase(a) ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String getListe(){
+        String s="";
+        for(Lista p: liste){
+            s+= (p.getNome() + "\n");
         }
         return s;
     }
 
-    public  List<String> findListaByNome( String nome){
+    public  Lista findListaByNome( String nome){
         for (Lista p:liste){
             if(p.nome.equalsIgnoreCase(nome)){
-                return p.articoli;
+                return p;
             }
         }
         return null;
