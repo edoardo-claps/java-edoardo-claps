@@ -4,64 +4,64 @@ import java.util.Scanner;
 
 public class TestConto {
     public static void main(String[] args) {
-        boolean finito=false;
+        boolean finito = false;
 
-        Scanner tastiera=new Scanner(System.in);
+        Scanner tastiera = new Scanner(System.in);
         System.out.println("Vuoi aprire un nuovo conto ? y/n");
-        String apertura =tastiera.nextLine();
-        if(apertura.equalsIgnoreCase("y")) {
+        try {
 
-            System.out.println("inserisci il tuo nome");
-            String titolare= tastiera.nextLine();
+            String apertura = tastiera.nextLine();
+            if (apertura.equalsIgnoreCase("y")) {
 
-            String iban="IT5400003030h44848";
+                System.out.println("inserisci il tuo nome");
+                String titolare = tastiera.nextLine();
 
-            System.out.println("Effettua il primo versamento per l'apertura");
-            double saldo= tastiera.nextDouble();
+                String iban = "IT5400003030h44848";
 
-            ContoCorrente c1 = new ContoCorrente(titolare, iban, saldo);
+                System.out.println("Effettua il primo versamento per l'apertura");
+                double saldo = tastiera.nextDouble();
 
-            System.out.println("saldo: "+c1.getSaldo());
+                ContoCorrente c1 = new ContoCorrente(titolare, iban, saldo);
 
-
-            while (!finito){
-
-            System.out.println("Signor "+ c1.getTitolare()+" vuole effettuare delle operazioni? y/n" +" saldo: "+c1.getSaldo());
-            String risposta=tastiera.nextLine();
-
-                if (risposta.equalsIgnoreCase("y")){
-                    System.out.println("Scriva V per Versamento e P per prelievo E per uscire dal servizio");
-                    String risposta2=tastiera.nextLine();
-
-                    if (risposta2.equalsIgnoreCase("v")){
-                        System.out.println("quanto vuole versare?");
-                        c1.deposito(tastiera.nextDouble());
-                        System.out.println("saldo: "+c1.getSaldo());
+                System.out.println("saldo: " + c1.getSaldo());
 
 
-                    }
-                    else if (risposta2.equalsIgnoreCase("p")){
-                        System.out.println("quanto vuole prelevare?");
+                while (!finito) {
 
-                        c1.prelievo(tastiera.nextDouble());
-                        System.out.println("saldo: "+c1.getSaldo());
+                    System.out.println("Signor " + c1.getTitolare() + " vuole effettuare delle operazioni? y/n" + " saldo: " + c1.getSaldo());
+                    String risposta = tastiera.next();
 
-                    }
-                    else if(risposta2.equalsIgnoreCase("e")){
+                    if (risposta.equalsIgnoreCase("y")) {
+                        System.out.println("Scriva V per Versamento e P per prelievo E per uscire dal servizio");
+                        String risposta2 = tastiera.next();
+
+                        if (risposta2.equalsIgnoreCase("v")) {
+                            System.out.println("quanto vuole versare?");
+                            c1.deposito(tastiera.nextDouble());
+                            System.out.println("saldo: " + c1.getSaldo());
+
+
+                        } else if (risposta2.equalsIgnoreCase("p")) {
+                            System.out.println("quanto vuole prelevare?");
+
+                            c1.prelievo(tastiera.nextDouble());
+                            System.out.println("saldo: " + c1.getSaldo());
+
+                        } else if (risposta2.equalsIgnoreCase("e")) {
+                            System.out.println("Grazie e arrivederci !");
+                            finito = true;
+                        }
+
+                    } else if (risposta.equalsIgnoreCase("n")) {
                         System.out.println("Grazie e arrivederci !");
-                        finito=true;
+                        finito = true;
                     }
-
                 }
-                else if (risposta.equalsIgnoreCase("n")){
-                    System.out.println("Grazie e arrivederci !");
-                    finito=true;
-                }
+            } else if (apertura.equalsIgnoreCase("n")) {
+                System.out.println("Grazie e arrivederci !");
             }
-        }
-        else if (apertura.equalsIgnoreCase("n")) {
-            System.out.println("Grazie e arrivederci !");
+        }catch (Exception error){
+            System.out.println("hai inserito un valore non possibile ci spiace ma è impossibile elaborare la richiesta");
         }
     }
-
 }

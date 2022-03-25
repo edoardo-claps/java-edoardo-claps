@@ -1,0 +1,24 @@
+la differenza nel dichiarare vaeriabili provate e pubbliche all'interno di una classe
+è data dall'accessibilità alle stesse dall'esterno della classe.
+
+Quando istanziamo un oggetto all'esterno della classe (ad esempio in un metodo main) usiamo il costruttore della classe
+inizializzando cosi i diversi attributi dell'oggetto.
+Nel momento in cui vogliamo andare a modificare il valore di un determinato attributo bisognerà capire se questo è stato
+definito all'interno della classe con l'access method "public" o "private", la differenza infatti sta proprio , come
+suggerisce il nome, nell'accessibilità e nella possibilità di modificare i valori di riferimento.
+
+    esempio:
+    se la variabile String nome è stata definita nella classe come public, sarà possibile modificarla ditrettamente
+    dall'esterno senza utilizzare nessun metodo ma scrivendo semplicemente:
+
+        System.out.println(NomeOggetto.nome) //stampare il valore
+        NomeOggetto.nome = "qualcosa" //settare
+
+    se invece fosse definita come priate allora avremmo bisogno di un metodo get e un metodo set per poter rispettivamente
+     vedere o modificare il valore della variabile. in questo caso quindi il codice nel main sarà:
+
+        System.out.println(NomeOggetto.getNome()) //stampare il valore
+         NomeOggetto.setNome("qualcosa")//settare
+
+L'impossibilità di accedere alle variabili dall'esterno della classe è molto utile allo sviluppatore anche per questioni
+di sicurezza e performance del codice
