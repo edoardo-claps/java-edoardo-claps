@@ -1,14 +1,15 @@
-package Esercizio2;
+package Esercizio.esercizio2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 /**
  * @author Edoardo Claps
  * esercizio che richiede di implementare i cicli while-for-dowhile sommando due numeri x volte
  * tenendo traccia dei numeri
  * */
 
-public class Esercizio2while {
+public class Esercizio2DoWihile {
     public static void main(String[] args) {
         int primonumero;
         int secondonumero;
@@ -23,8 +24,7 @@ public class Esercizio2while {
 
         ArrayList<Integer> calc= new ArrayList<Integer>();
 
-        while(!finito){
-
+       do {
             System.out.println("inserisci il primo numero");
             primonumero=input.nextInt();
             System.out.println("inserisci il secondo numero");
@@ -38,7 +38,7 @@ public class Esercizio2while {
             if (numeri<=0){
                 finito=true;
             }
-        }
+        } while(!finito);
 
         for (int elem : calc) {
             System.out.println("Somma provvisoria "+elem );

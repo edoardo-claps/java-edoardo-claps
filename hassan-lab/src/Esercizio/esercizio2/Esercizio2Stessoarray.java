@@ -1,4 +1,4 @@
-package Esercizio2;
+package Esercizio.esercizio2;
 
 /**
  * @author Edoardo Claps

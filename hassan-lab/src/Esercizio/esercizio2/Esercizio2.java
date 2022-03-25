@@ -1,6 +1,5 @@
-package Esercizio2;
+package Esercizio.esercizio2;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 /**
