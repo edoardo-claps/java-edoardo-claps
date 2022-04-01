@@ -12,4 +12,16 @@ public class Rettangolo extends Poligono{
     public double perimetro(){
         return ((getBase()*2)+(getAltezza()*2));
     }
+
+    @Override
+    public String toString() {
+        return "Rettangolo{" +
+                "base" + getBase()+
+                "altezza" + getAltezza()+
+                "}";
+    }
+
+    public static String dettagli(){
+        return " la classe Poligono ha come attributi { base, altezza}";
+    }
 }

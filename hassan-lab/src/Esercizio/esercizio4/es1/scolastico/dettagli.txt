@@ -1,0 +1,3 @@
+public static String dettagli(){
+      return " la classe Liceo ha come attributi { nome, indirizzo ,numeroAlunni=, tipologia}";
+    }

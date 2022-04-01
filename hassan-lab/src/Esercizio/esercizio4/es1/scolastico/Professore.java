@@ -15,4 +15,13 @@ public class Professore extends Persona {
     public void setMateria(String materia) {
         this.materia = materia;
     }
+
+    @Override
+    public String toString() {
+        return "Studente{" +
+                "nome='" + getNome()+ '\'' +
+                ", cognome='" + getCognome() + '\'' +
+                ", materia='" + materia + '\'' +
+                '}';
+    }
 }

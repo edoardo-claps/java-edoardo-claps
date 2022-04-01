@@ -1,7 +1,10 @@
 package Esercizio.esercizio4.es1.poligoni;
 
-public class TriangoloRettangolo extends Triangolo{
-    public TriangoloRettangolo(double base, double altezza) {
+/**
+ * la classe triangolo padre si ritiene isoscele perchè non so come si calcoli l'area di un triangolo generico
+ * */
+public class Triangolo extends Poligono{
+    public Triangolo(double base, double altezza) {
         super(base, altezza);
     }
 
@@ -11,19 +14,20 @@ public class TriangoloRettangolo extends Triangolo{
 
     public double perimetro(){
         return (
-                Math.sqrt( (Math.pow(getBase(),2))+(Math.pow(getAltezza(),2)))
-                        +getAltezza()
-                        +getBase()
+               ( Math.sqrt( (Math.pow((getBase()/2),2)))*2)
+                       +getAltezza()
+
         );
     }
+
     @Override
     public String toString() {
-        return "TriangoloRettangolo{" +
+        return "Triangolo{" +
                 "base" + getBase()+
                 "altezza" + getAltezza()+
                 "}";
     }
     public static String dettagli(){
-        return " la classe TriangoloRettangolo ha come attributi { base, altezza}";
+        return " la classe Triangolo ha come attributi { base, altezza}";
     }
 }

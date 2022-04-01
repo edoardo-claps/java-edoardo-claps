@@ -26,4 +26,14 @@ public class Studente extends Persona{
     public void setMediavoti(double mediavoti) {
         this.mediavoti = mediavoti;
     }
+
+    @Override
+    public String toString() {
+        return "Studente{" +
+                "nome='" + getNome()+ '\'' +
+                ", cognome='" + getCognome() + '\'' +
+                ", classe Frequentata='" + classeFrequentata + '\'' +
+                ", mediavoti=" + mediavoti +
+                '}';
+    }
 }

@@ -24,4 +24,16 @@ public class Poligono {
     public void setAltezza(double altezza) {
         this.altezza = altezza;
     }
+
+    @Override
+    public String toString() {
+        return "Poligono{" +
+                "base=" + base +
+                ", altezza=" + altezza +
+                '}';
+    }
+
+    public static String dettagli(){
+        return " la classe Poligono ha come attributi { base, altezza}";
+    }
 }

@@ -12,4 +12,16 @@ public class Rombo extends Poligono{
     public double perimetro(){
         return ((getBase()*2)+(getAltezza()*2));
     }
+
+    @Override
+    public String toString() {
+        return "Rombo{" +
+                "base" + getBase()+
+                "altezza" + getAltezza()+
+                "}";
+    }
+
+    public static String dettagli(){
+        return " la classe Rombo ha come attributi { base, altezza}";
+    }
 }
