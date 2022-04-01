@@ -1,11 +1,17 @@
 package Esercizio.esercizio4.es1.poligoni;
 
+import java.util.HashMap;
+
 /**
  * la classe triangolo padre si ritiene isoscele perchè non so come si calcoli l'area di un triangolo generico
  * */
 public class Triangolo extends Poligono{
+
+
+
     public Triangolo(double base, double altezza) {
         super(base, altezza);
+
     }
 
     public double area(){
